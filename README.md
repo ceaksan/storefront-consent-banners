@@ -1,5 +1,7 @@
 # Consent banners on ecommerce storefronts: dataset v1
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24090344.svg)](https://doi.org/10.5281/zenodo.24090344)
+
 How ecommerce storefronts present cookie consent on their homepage, on desktop and on
 mobile, as a first-time visitor sees it. One row per site and viewport. v1 covers
 storefronts on three Turkish SaaS ecommerce platforms; later releases add other
@@ -257,6 +259,6 @@ share and adapt, including commercially, with attribution. Attribution names the
 and the dataset with its version and links to the dataset:
 
 > Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.0,
-> https://github.com/ceaksan/storefront-consent-banners (CC BY 4.0)
+> https://doi.org/10.5281/zenodo.24090345 (CC BY 4.0)
 
 `CITATION.cff` holds the same for citation tools.

@@ -9,6 +9,7 @@ authors:
   - family-names: Aksan
     given-names: Ceyhun
     alias: ceaksan
+doi: "10.5281/zenodo.24090345"
 repository-code: "https://github.com/ceaksan/storefront-consent-banners"
 abstract: >-
   How ecommerce storefronts present cookie consent on their homepage, on desktop and on

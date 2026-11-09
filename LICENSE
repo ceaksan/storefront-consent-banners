@@ -14,6 +14,4 @@ Requested attribution (CC BY 4.0, section 3(a)(1)): name the author and the data
 with its version, and link to the dataset, for example:
 
   Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.0,
-  https://github.com/ceaksan/storefront-consent-banners (CC BY 4.0)
-
-Use the DOI link instead of the repository link once one is listed in README.md.
+  https://doi.org/10.5281/zenodo.24090345 (CC BY 4.0)
