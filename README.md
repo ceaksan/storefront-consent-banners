@@ -256,7 +256,7 @@ The data and this datasheet are licensed under CC BY 4.0 (see `LICENSE`): free t
 share and adapt, including commercially, with attribution. Attribution names the author
 and the dataset with its version and links to the dataset:
 
-> ceaksan, "Consent banners on ecommerce storefronts", v1.0.0,
+> Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.0,
 > https://github.com/ceaksan/storefront-consent-banners (CC BY 4.0)
 
 `CITATION.cff` holds the same for citation tools.

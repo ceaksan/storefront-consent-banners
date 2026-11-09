@@ -6,7 +6,9 @@ version: "1.0.0"
 date-released: "2026-11-09"
 license: CC-BY-4.0
 authors:
-  - alias: ceaksan
+  - family-names: Aksan
+    given-names: Ceyhun
+    alias: ceaksan
 repository-code: "https://github.com/ceaksan/storefront-consent-banners"
 abstract: >-
   How ecommerce storefronts present cookie consent on their homepage, on desktop and on
