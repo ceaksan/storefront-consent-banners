@@ -50,8 +50,9 @@ in `columns.json` (`sector_definitions`).
 - **Decision:** where both models gave the same primary category, that category was
   kept (about 91 % of sites). For the rest, a person read the profile and decided. Two
   sites have no sector because no profile could be built from their homepage.
-- **Check:** where a platform files a site under one of its own sectors (1132 sites),
-  the final category or the second one matched that label on 91 %.
+- **Check:** a platform files 1131 of the sites under one of its own sectors; 1130 of
+  them have a final category, and on 1030 of those (91 %) the final category or the
+  second one matched that label.
 
 ## Collection
 
@@ -207,6 +208,15 @@ choice.
 `columns.json` beside the file holds the same descriptions, the band edges, the sector
 definitions and the Turkish source names of the sectors.
 
+## Use of AI tools
+
+Sector classification used two local open-weight models, as described above. The
+scanners, the build and analysis code and parts of this datasheet were written with AI
+coding assistants (Claude Code, OpenAI Codex), which were also used to review the code
+and the method. Banner labels, sector decisions where the models disagreed, and every
+editorial decision were made by a person; all numbers here were recomputed from the
+data.
+
 ## Limits
 
 - A curated sample: reference stores of three platforms, not the platforms at large and
@@ -215,6 +225,8 @@ definitions and the Turkish source names of the sectors.
   depend on location; this is what it looked like at capture time.
 - Emulated viewports in a desktop browser, not real phones.
 - One labeller, no second pass on a held-out set.
+- The 3174 rows are 1587 sites seen at two viewports, not 3174 independent sites;
+  analyses across viewports should treat the two rows of a site as paired.
 - `nudge` and the prominence columns are rules applied to what is on screen; they were
   not tested on how visitors choose.
 - An empty cell means the column does not apply on that row or could not be measured
