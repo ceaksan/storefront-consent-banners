@@ -68,6 +68,29 @@
   "other": "diger",
   "multi_category": "cok_kategorili"
  },
+ "sector_definitions": {
+  "clothing": "Clothing for women, men, children, modest wear, underwear, scarves and hats",
+  "shoes_bags": "Shoes, bags, leather goods",
+  "jewellery_watches_optics": "Jewellery, watches, eyewear and optical shops",
+  "cosmetics_personal_care": "Cosmetics, perfume, personal care, hair and skin care",
+  "food_beverage": "Food, groceries, coffee, sweets, nuts, olive oil, organic and farm produce",
+  "home_living": "Kitchenware, tableware, home textiles, carpets, home decoration, cleaning products",
+  "furniture": "Furniture",
+  "electronics_computing": "Consumer electronics, computers, phones and accessories, printer supplies",
+  "home_appliances": "Small and large home appliances, heating and cooling",
+  "building_hardware_electrical": "Hardware, tools, building supplies, electrical and electronic components, security systems",
+  "mother_baby_toys": "Baby and mother products, toys",
+  "sports_outdoor": "Sports, camping, hunting, outdoor gear",
+  "automotive": "Car and motorcycle parts and equipment",
+  "books_stationery": "Books, publishers, stationery, office supplies",
+  "hobby_gifts": "Hobby, party, gifts, musical instruments",
+  "pets": "Pet food and supplies",
+  "garden_agriculture": "Garden and farm supplies: seeds, seedlings, plants, fertiliser, garden tools and machines, irrigation, beekeeping, livestock supplies",
+  "health_medical": "Health, medical supplies, supplements",
+  "b2b_industrial": "Business supply: professional kitchen, packaging, corporate and public procurement",
+  "multi_category": "General store selling across many unrelated categories",
+  "other": "Not a shop, an association, a celebrity store, or nothing above fits"
+ },
  "bands": {
   "colour_distance": [
    "0-5",

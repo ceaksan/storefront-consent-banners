@@ -33,9 +33,25 @@ describes the stores the platforms show off, not every store on those platforms.
 - **Site language** is what the homepage declares in `<html lang>`, not a detected
   language: `tr`, `en` or `other` (rare languages grouped so they do not single a site
   out), empty when the page declares none.
-- **Sector** follows our own 21-category taxonomy, not the platforms' labels. Two local
-  language models classified a profile of each homepage; a person settled every case
-  where they disagreed. A few sites have no sector.
+- **Sector** is described in its own section below.
+
+## Sector
+
+Our own 21-category taxonomy, not the platforms' labels; each category's definition is
+in `columns.json` (`sector_definitions`).
+
+- **Input:** a short text profile of each homepage: title, meta description and
+  keywords, site name, first heading, and the header and menu links, which on a shop
+  homepage are mostly the category menu.
+- **Classification:** two open-weight models run locally, Qwen 3.5 35B-A3B and Gemma 4
+  31B (both Q8_0, through Ollama, temperature 0). Each received the category list with
+  definitions and the profile, and answered with a primary category, an optional second
+  one and a confidence score.
+- **Decision:** where both models gave the same primary category, that category was
+  kept (about 91 % of sites). For the rest, a person read the profile and decided. Two
+  sites have no sector because no profile could be built from their homepage.
+- **Check:** where a platform files a site under one of its own sectors (1132 sites),
+  the final category or the second one matched that label on 91 %.
 
 ## Collection
 
@@ -188,8 +204,8 @@ choice.
 | `reject_wording` | reject_all, reject, necessary_only or other | 478 | necessary_only, other, reject, reject_all |
 | `settings_wording` | customise, manage, settings, preferences or other | 853 | customise, manage, other, preferences, settings |
 
-`columns.json` beside the file holds the same descriptions, the band edges and the
-Turkish source names of the sectors.
+`columns.json` beside the file holds the same descriptions, the band edges, the sector
+definitions and the Turkish source names of the sectors.
 
 ## Limits
 
@@ -218,8 +234,8 @@ Site ids and codes stay the same across releases.
 ## Files
 
 - `consent-sites.csv`: the data, UTF-8, one header row.
-- `columns.json`: column descriptions, band edges and the Turkish source names of the
-  sectors.
+- `columns.json`: column descriptions, band edges, the sector definitions and the
+  Turkish source names of the sectors.
 - `SHA256SUMS`: checksums of the two files above.
 
 ## Licence and citation
