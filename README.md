@@ -261,4 +261,4 @@ and the dataset with its version and links to the dataset:
 > Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.0,
 > https://doi.org/10.5281/zenodo.24090345 (CC BY 4.0)
 
-`CITATION.cff` holds the same for citation tools.
+`CITATION.cff` holds the same for citation tools, `.zenodo.json` for Zenodo.

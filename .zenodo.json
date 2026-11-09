@@ -1,0 +1,20 @@
+{
+  "upload_type": "dataset",
+  "title": "Consent banners on ecommerce storefronts",
+  "version": "1.0.0",
+  "publication_date": "2026-11-09",
+  "creators": [
+    {
+      "name": "Aksan, Ceyhun"
+    }
+  ],
+  "description": "How ecommerce storefronts present cookie consent on their homepage, on desktop and on mobile, as a first-time visitor sees it. v1 covers 1587 storefronts on three Turkish SaaS ecommerce platforms, one row per site and viewport, with coded platforms and vendors and coarsened measurements. Sectors were classified by two local open-weight models with human review where they disagreed; the code and parts of the datasheet were written and reviewed with AI coding assistants (Claude Code, OpenAI Codex); banner labels and editorial decisions were made by a person.",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "cookie consent",
+    "consent banner",
+    "ecommerce",
+    "KVKK"
+  ]
+}
