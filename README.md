@@ -317,6 +317,6 @@ share and adapt, including commercially, with attribution. Attribution names the
 and the dataset with its version and links to the dataset:
 
 > Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.1,
-> https://doi.org/10.5281/zenodo.24090344 (CC BY 4.0)
+> https://doi.org/10.5281/zenodo.24218378 (CC BY 4.0)
 
 `CITATION.cff` holds the same for citation tools, `.zenodo.json` for Zenodo.
