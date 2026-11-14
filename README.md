@@ -101,7 +101,7 @@ fill. Fills come from the screenshot; label colour, font size and weight come fr
 page's own record of the same element, used only where its background agrees with the
 screenshot. Where the capture visit left no such record, font size and weight come from
 a second visit that found each button by its label; a check on 20 banners measured both
-ways gave the same size on 34 of 36 buttons. A button's *face* is its fill when filled,
+ways gave the same size on 34 of 36 buttons. A button's _face_ is its fill when filled,
 else its border or label colour. Colour difference is CIEDE2000; contrast is the WCAG
 ratio. Theme, temperature and hue family are coarse names for the same colours.
 
@@ -185,30 +185,87 @@ choice.
 | `banner_theme` | banner background theme: light or dark | 1464 | dark, light |
 | `banner_temperature` | banner background temperature | 1464 | cool, neutral, warm |
 | `banner_hue_family` | banner background colour family | 1464 | black, blue, cyan, green, grey, orange, pink, purple, red, white, yellow |
-| `accept_filled` | the accept button has a filled background | 1099 | False, True |
-| `accept_temperature` | accept button colour temperature | 1099 | cool, neutral, warm |
-| `accept_hue_family` | accept button colour family | 1099 | black, blue, cyan, green, grey, orange, pink, purple, red, white, yellow |
+| `accept_filled` | the accept button has a filled background | 1103 | False, True |
+| `accept_temperature` | accept button colour temperature | 1103 | cool, neutral, warm |
+| `accept_hue_family` | accept button colour family | 1103 | black, blue, cyan, green, grey, orange, pink, purple, red, white, yellow |
 | `reject_filled` | the reject button has a filled background (button rejects only) | 478 | False, True |
 | **Prominence** | | | |
-| `accept_contrast_de` | CIEDE2000 band between the accept button's face (fill when filled, else border or label colour) and the banner background, dominant colours | 1099 | 0-5, 5-10, 10-20, 20-40, 40+ |
-| `accept_luminance_ratio` | WCAG contrast ratio band of the accept button's face against the banner background | 1099 | <3, 3-4.5, 4.5-7, 7+ |
+| `accept_contrast_de` | CIEDE2000 band between the accept button's face (fill when filled, else border or label colour) and the banner background, dominant colours | 1103 | 0-5, 5-10, 10-20, 20-40, 40+ |
+| `accept_luminance_ratio` | WCAG contrast ratio band of the accept button's face against the banner background | 1103 | <3, 3-4.5, 4.5-7, 7+ |
 | `banner_page_de` | CIEDE2000 band between the banner background and the page as seen in the screenshot, dominant colours | 1462 | 0-5, 5-10, 10-20, 20-40, 40+ |
 | `banner_ring_de` | CIEDE2000 band between the banner background and a 40 px ring of page right around it, dominant colours | 1462 | 0-5, 5-10, 10-20, 20-40, 40+ |
 | `saliency_lift` | how much more the banner stands out than the page around it, rounded to 0.25 | 1462 |  |
-| `nudge` | which of accept and reject is visually favoured: accept, equal or reject (a filled button over an outline one, else colour distance and area) | 921 | accept, equal, reject |
+| `nudge` | which of accept and reject is visually favoured: accept, equal or reject (a filled button over an outline one, else colour distance and area) | 925 | accept, equal, reject |
 | **Accept against reject** | | | |
-| `pair_same_colour` | accept and reject faces within CIEDE2000 10 (fill, or border or label colour for an outline button) | 473 | False, True |
-| `pair_same_style` | accept and reject are both filled or both outline | 473 | False, True |
-| `pair_font_weight_diff` | accept label font weight minus reject label font weight (page values) | 449 | -200, 0, 100, 200, 300 |
-| `accept_label_contrast` | WCAG contrast ratio band of the accept label on its fill | 1099 | <3, 3-4.5, 4.5-7, 7+ |
+| `pair_same_colour` | accept and reject faces within CIEDE2000 10 (fill, or border or label colour for an outline button) | 477 | False, True |
+| `pair_same_style` | accept and reject are both filled or both outline | 477 | False, True |
+| `pair_font_weight_diff` | accept label font weight minus reject label font weight (page values) | 453 | -200, 0, 100, 200, 300 |
+| `accept_label_contrast` | WCAG contrast ratio band of the accept label on its fill | 1103 | <3, 3-4.5, 4.5-7, 7+ |
 | `reject_label_contrast` | WCAG contrast ratio band of the reject label on its fill | 478 | <3, 3-4.5, 4.5-7, 7+ |
 | **Wording** | | | |
-| `accept_wording` | accept_all, accept, acknowledge (ok, got it, close) or other | 1098 | accept, accept_all, acknowledge, other |
+| `accept_wording` | accept_all, accept, acknowledge (ok, got it, close) or other | 1102 | accept, accept_all, acknowledge, other |
 | `reject_wording` | reject_all, reject, necessary_only or other | 478 | necessary_only, other, reject, reject_all |
 | `settings_wording` | customise, manage, settings, preferences or other | 853 | customise, manage, other, preferences, settings |
 
 `columns.json` beside the file holds the same descriptions, the band edges, the sector
 definitions and the Turkish source names of the sectors.
+
+## Related work
+
+Earlier studies of cookie banners measure EU or global sites. This dataset covers Turkish
+ecommerce storefronts and adds per-banner layout and prominence measures from
+human-labelled screenshots on desktop and mobile. Studies are listed whether or not they
+released data, so a reader can see what has been measured before; what each released is
+stated as found on its project or paper page in November 2026.
+
+**Released data or tools**
+
+- Bollinger, Kubicek, Cotrini and Basin, "Automating Cookie Consent and GDPR Violation
+  Detection" (USENIX Security 2022): about 304k cookies with purpose labels from about
+  30k websites, gathered from CMPs. Cookies rather than banner design. Data on Zenodo,
+  https://doi.org/10.5281/zenodo.5838646
+- Rasaii et al., BannerClick (PAM 2023, IMC 2023, PETS 2025): a tool built on OpenWPM that
+  detects and clicks banners on top-ranked sites, used to study accept-or-pay banners and
+  tracking after interaction. Code at https://github.com/bannerclick/bannerclick; data and
+  scripts in the Max Planck Open Research Data Repository,
+  https://doi.org/10.17617/3.1MUYFX, https://doi.org/10.17617/3.TREBZR,
+  https://doi.org/10.17617/3.QZCILK
+- Nouwens, Kristensen, Maalt and Bagge, "A Cross-Country Analysis of GDPR Cookie Banners
+  and Flexible Methods for Scraping Them" (CHI 2025): the top 10,000 sites in each of 31
+  countries (254,148 sites). The scraper is released as Consent Observatory (MPL-2.0),
+  https://github.com/cavi-au/consent-observatory.eu; no dataset link found.
+  https://arxiv.org/abs/2503.19655
+- papayaverse, cookie_banner_dataset (2024, MIT): banner text and button labels of 561
+  mostly global sites, buttons parsed by a language model, published with URLs and raw
+  text. https://github.com/papayaverse/cookie_banner_dataset
+
+**Studies (no dataset link found)**
+
+- Utz, Degeling, Fahl, Schaub and Holz, "(Un)informed Consent: Studying GDPR Consent
+  Notices in the Field" (CCS 2019): field experiments with more than 80,000 users on one
+  German website; notice position, type of choice and nudging changed what users chose.
+  https://arxiv.org/abs/1909.02638
+- Matte, Bielova and Santos, "Do Cookie Banners Respect my Choice?" (2020): 1,426 sites
+  with IAB Europe TCF banners out of 22,949 crawled in September 2019; suspected
+  violations on 304 of the sites analysed. Browser extension source released (Cookie
+  Glasses). https://www-sop.inria.fr/members/Nataliia.Bielova/cookiebanners/
+- Nouwens, Liccardi, Veale, Karger and Kagal, "Dark Patterns after the GDPR" (CHI 2020):
+  the designs of the five most popular CMPs on 680 of the top 10,000 UK sites; 11.8 % met
+  minimal legal requirements. https://arxiv.org/abs/2001.02479
+- Hils, Woods and Böhme, "Measuring the Emergence of Consent Management on the Web"
+  (IMC 2020): 161 million browser crawls over 4.2 million domains; CMP adoption doubled
+  from June 2018 to June 2019 and again by June 2020.
+  https://informationsecurity.uibk.ac.at/pdfs/HWB2020_Consent_Management_IMC.pdf
+- Bouhoula, Kubicek, Zac, Cotrini and Basin, "Automated Large-Scale Analysis of Cookie
+  Notice Compliance" (USENIX Security 2024): 97k websites popular in the EU, crawled after
+  reject, accept, save, close and no interaction.
+- Uluk, "Sitemizi ziyaret ederek çerezleri kabul etmiş sayılırsınız" (Connectist 64,
+  2023): the 50 most visited Turkish news sites in May 2022; all set non-necessary cookies
+  without explicit consent. The closest Turkish study found; news sites, not ecommerce.
+  https://doi.org/10.26650/CONNECTIST2023-1219698
+
+No released dataset was found that covers Turkish ecommerce sites, labels banner layout
+by hand, or measures both viewports.
 
 ## Use of AI tools
 
@@ -242,6 +299,7 @@ data.
 | Version | Date | Change |
 | --- | --- | --- |
 | v1.0.0 | 2026-11-09 | first release |
+| v1.0.1 | 2026-11-14 | label fix: on two sites (4 rows, both viewports) of one vendor the accept button was labelled as an other button; `has_accept`, the `accept_*` columns, `nudge` and the `pair_*` columns change on those rows. Datasheet: related work section |
 
 Site ids and codes stay the same across releases.
 
@@ -258,7 +316,7 @@ The data and this datasheet are licensed under CC BY 4.0 (see `LICENSE`): free t
 share and adapt, including commercially, with attribution. Attribution names the author
 and the dataset with its version and links to the dataset:
 
-> Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.0,
-> https://doi.org/10.5281/zenodo.24090345 (CC BY 4.0)
+> Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.1,
+> https://doi.org/10.5281/zenodo.24090344 (CC BY 4.0)
 
 `CITATION.cff` holds the same for citation tools, `.zenodo.json` for Zenodo.

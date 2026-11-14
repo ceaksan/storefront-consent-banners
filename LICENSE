@@ -1,4 +1,4 @@
-Consent banners on ecommerce storefronts, dataset v1.0.0
+Consent banners on ecommerce storefronts, dataset v1.0.1
 Copyright (c) 2026 Ceyhun Aksan
 
 The data (consent-sites.csv, columns.json) and the datasheet (README.md) are licensed
@@ -13,5 +13,5 @@ Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 Requested attribution (CC BY 4.0, section 3(a)(1)): name the author and the dataset
 with its version, and link to the dataset, for example:
 
-  Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.0,
-  https://doi.org/10.5281/zenodo.24090345 (CC BY 4.0)
+  Ceyhun Aksan, "Consent banners on ecommerce storefronts", v1.0.1,
+  https://doi.org/10.5281/zenodo.24090344 (CC BY 4.0)
